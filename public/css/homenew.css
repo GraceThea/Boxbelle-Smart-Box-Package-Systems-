@@ -1,0 +1,498 @@
+@font-face {
+    font-family: 'Lost Signal Regular';
+    src: url('/fonts/Balance Groovy.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lost Signal Regular', fallback;
+    
+}
+
+html {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body {
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+    
+}
+
+/*Top-bar section*/
+.top-bar {
+    background-color: #a7bfab; /* Blue color */
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+  }
+
+
+/* Navigation Section */
+/* Style for the navigation bar */
+.navbar {
+    color: #d4b545;
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Adjust this value as needed */
+    
+  }
+
+  /* Style for the scrolled state */
+.navbar.scrolled {
+    background-color: #fff;
+    margin-top : -2px
+  }
+  
+  .navbar:hover {
+    background-color: #fff;
+    
+  }
+  
+  /* Style for the website name or logo */
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  /* Style for the links in the navigation bar */
+  .navbar-links a {
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  /* Style for the search input and button */
+  .navbar-search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-search input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .navbar-search button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+
+/* Main Top Section */
+/* Style for Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    background: rgb(194, 190, 190);
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicators li.active {
+    background: white;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 500px; /* Adjust as needed */
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%; /* Full height of the carousel-item */
+    object-fit: cover; /* This will ensure your images cover the full area without distortion */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: white;
+    position: relative;
+}
+
+.carousel-control-prev-icon::before, .carousel-control-next-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: black;
+    width: 2px;
+    height: 10px;
+}
+
+.carousel-control-prev-icon::after, .carousel-control-next-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: black;
+    width: 2px;
+    height: 10px;
+}
+
+.carousel-control-prev-icon::before {
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel-control-prev-icon::after {
+    transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+
+/* 2nd Section */
+.second-top-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    margin: 0 auto;
+    font-weight: 400;
+    background-color: #f8f0ec;
+}
+
+.second-top-row .second-top-column {
+    text-align: center;
+    margin-bottom: 1px;
+}
+    
+.second-top-row h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+}
+
+.second-top-row h3 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: fill !important;
+}
+
+/* Third Section styles */
+.wrapper {
+    width: 100%;
+    position: relative;
+    
+  }
+  .wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #e2cf84;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper i:first-child{
+    left: -22px;
+  }
+  .wrapper i:last-child{
+    right: -22px;
+  }
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .carousel .card .img {
+    background: #c3d1a0;
+    height: 160px;
+    width: 165px;
+    border-radius: 70%;
+  }
+  .card .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 10%;
+    object-fit: cover;
+    
+  }
+  .carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+  }
+  .carousel .card span {
+    color: #535457;
+    font-size: 1.31rem;
+  }
+  @media screen and (max-width: 900px) {
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .wrapper .carousel {
+      grid-auto-columns: 100%;
+    }
+  }
+
+/* Fourth Section styles */
+
+.fourth-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fef9e7; /* You can change the color as desired */
+    padding: 50px;
+}
+
+.image-container img {
+    width: 70%; /* Adjust as needed */
+    height: auto;
+    margin-left:20%;
+}
+
+.fourth-top-column {
+    width: 50%; /* Adjust as needed */
+    text-align: left;
+}
+
+.fourth-top-column h2 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+    color: #333; /* You can change the color as desired */
+}
+
+.fourth-top-column h3 {
+    font-size: 1.8rem;
+    color: #666; /* You can change the color as desired */
+}
+
+.order-now-button {
+    background-color: #f4f4f4; 
+    color: #333; 
+    border: 2px solid #333; 
+    padding: 10px 20px;
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    outline: none; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.order-now-button:hover {
+    background-color: #e6e6e6; 
+    color: #000; 
+}
+
+/* fifth Section */
+.instagram-banner {
+    background-size: cover;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.instagram-banner h1 {
+    font-size: 2em; /* Adjust size as needed */
+    color: #000; 
+}
+
+.instagram-banner p {
+    margin: 10px 0;
+    color: #000; /* Or any color you prefer */
+}
+
+.follow-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 2px; /* Adjust as needed */
+    background-color:#f8f6f6; /* Or any color you prefer */
+    color: #000; /* Button text color */
+    text-decoration: none;
+}
+
+/* sixth Section */
+.footer {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin: 10px;
+}
+
+.address p, .footer-bottom p {
+    color: #333;
+    line-height: 1.5;
+}
+
+.links h3, .help h3, .newsletter h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.links ul, .help ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links li, .help li {
+    margin-bottom: 5px;
+}
+
+.links a, .help a {
+    color: #333;
+    text-decoration: none;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+

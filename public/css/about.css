@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'Lost Signal Regular';
+    src: url('/fonts/Balance Groovy.ttf');
+}
+
+* {
+    font-family: 'Lost Signal Regular', fallback;
+}
+
+html {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body {
+    margin: 0;
+    align-items: center;
+}
+
+
+/*Top-bar section*/
+.top-bar {
+    background-color: #a7bfab; /* Blue color */
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+  }
+
+
+/* Navigation Section */
+/* Style for the navigation bar */
+.navbar {
+    color: #d4b545;
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Style for the scrolled state */
+.navbar.scrolled {
+    background-color: #fff;
+    margin-top : -2px
+  }
+  
+  .navbar:hover {
+    background-color: #fff;
+    
+  }
+  
+  /* Style for the website name or logo */
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  /* Style for the links in the navigation bar */
+  .navbar-links a {
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  /* Style for the search input and button */
+  .navbar-search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-search input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .navbar-search button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Main Section */
+  .about-section {
+    text-align: center;
+    padding: 50px 20px; /* Adjust the padding to control spacing */
+    background-color: #fff; /* Change the background color if needed */
+  }
+  
+  .about-section h3 {
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    margin-bottom: 0.5em; /* Adjust the space below the heading */
+    font-weight: bold; /* Make the heading bold */
+  }
+  
+  .about-section p {
+    font-size: 1rem; /* Adjust the font size as needed */
+    margin-bottom: 1em; /* Adjust the space below the paragraph */
+    line-height: 1.6; /* Adjust the line height for readability */
+    text-align: justify;
+    display : inline-block;
+  }
+
+  /* second section */
+  .footer {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin: 10px;
+}
+
+.address p, .footer-bottom p {
+    color: #333;
+    line-height: 1.5;
+}
+
+.links h3, .help h3, .newsletter h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.links ul, .help ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links li, .help li {
+    margin-bottom: 5px;
+}
+
+.links a, .help a {
+    color: #333;
+    text-decoration: none;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+  
+  
